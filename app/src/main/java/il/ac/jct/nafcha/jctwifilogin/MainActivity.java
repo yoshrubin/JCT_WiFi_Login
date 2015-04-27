@@ -1,7 +1,5 @@
 package il.ac.jct.nafcha.jctwifilogin;
 
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;

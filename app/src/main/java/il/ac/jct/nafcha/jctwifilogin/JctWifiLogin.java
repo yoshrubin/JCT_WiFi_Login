@@ -3,6 +3,7 @@ package il.ac.jct.nafcha.jctwifilogin;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -14,30 +15,19 @@ public class JctWifiLogin extends IntentService{
      *
      * @param name Used to name the worker thread, important only for debugging.
      */
-    public JctWifiLogin(String name) {
-        super(name);
-    }
-    public JctWifiLogin() {
-        super("JctWifiLogin");
-    }
 
-    @Override
+    private static final String TAG = "JctWifiLogin";
+
     public void onCreate() {
         super.onCreate();
-        Context context = getApplicationContext();
-        CharSequence text = "Hello wifi";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        Log.d(TAG , ">>>onCreate()");
+    }
+    public JctWifiLogin() {
+        super(JctWifiLogin.class.getName());
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        Context context = getApplicationContext();
-        CharSequence text = "Hello toast!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        Toast.makeText(this,"onHandleIntent works!", Toast.LENGTH_SHORT).show();
     }
 }

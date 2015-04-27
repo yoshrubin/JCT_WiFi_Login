@@ -26,7 +26,8 @@
                 <action android:name="android.net.wifi.STATE_CHANGE"/>
             </intent-filter>
         </receiver>
-        <service android:name=".JctWifiLogin"></service>
+        <service android:name=".JctWifiLogin"
+            android:enabled="true"/>
     </application>
 
 </manifest>

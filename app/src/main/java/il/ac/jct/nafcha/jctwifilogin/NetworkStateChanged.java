@@ -53,8 +53,8 @@ public class NetworkStateChanged extends BroadcastReceiver {
 
         Log.v(TAG, "Connected to the correct network");
 
-        Intent i = new Intent(context, JctWifiLogin.class);
-        context.startService(i);
+        context.startService(new Intent(context, JctWifiLogin.class));
+
     }
 
 }

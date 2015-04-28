@@ -5,4 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="notify_login_ongoing_title">Connecting...</string>
     <string name="notify_request_wifi_ongoing_text">Connecting...</string>
+    <string name="submit">submit</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
 </resources>

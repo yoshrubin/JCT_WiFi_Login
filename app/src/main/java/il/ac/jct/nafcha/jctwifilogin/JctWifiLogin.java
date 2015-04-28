@@ -7,6 +7,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.os.Build;
@@ -63,6 +64,11 @@ public class JctWifiLogin extends IntentService{
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        final SharedPreferences prefs = new ObscuredSharedPreferences(
+                this, this.getSharedPreferences("Preferences", MODE_PRIVATE) );
+        String user = prefs.getString("user", null);
+        String password = prefs.getString("password", null);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // For Lollipop+, we need to request the Wi-Fi network since
             // connections will go over mobile data by default if a captive
@@ -84,8 +90,8 @@ public class JctWifiLogin extends IntentService{
         DataPost.add(new BasicNameValuePair("err_msg", ""));
         DataPost.add(new BasicNameValuePair("info_flag", "1"));
         DataPost.add(new BasicNameValuePair("redirect_url", ""));
-        DataPost.add(new BasicNameValuePair("username", "nafcha"));
-        DataPost.add(new BasicNameValuePair("password", "HNafha11"));
+        DataPost.add(new BasicNameValuePair("username", user));
+        DataPost.add(new BasicNameValuePair("password", password));
         try {
             httpPost.setEntity(new UrlEncodedFormEntity(DataPost));
 

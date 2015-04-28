@@ -22,17 +22,27 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/passwordText"
-        android:layout_centerVertical="true"
+        android:text="@string/password"
+        android:layout_above="@+id/submit"
         android:layout_centerHorizontal="true"
-        android:text="@string/password" />
+        android:layout_marginBottom="51dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"
         android:id="@+id/submit"
-        android:layout_below="@+id/passwordText"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp" />
+        android:layout_marginBottom="62dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo_he_no_background"
+        android:layout_above="@+id/userText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp" />
 </RelativeLayout>
 

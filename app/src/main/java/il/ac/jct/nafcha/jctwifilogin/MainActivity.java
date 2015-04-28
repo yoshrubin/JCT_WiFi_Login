@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,16 +23,25 @@ public class MainActivity extends ActionBarActivity {
         final SharedPreferences prefs = new ObscuredSharedPreferences(
                 this, this.getSharedPreferences("Preferences", MODE_PRIVATE) );
 
+        final EditText userText = (EditText) findViewById(R.id.userText);
+        final EditText passwordText = (EditText) findViewById(R.id.passwordText);
+
+        String user = prefs.getString("user", null);
+        String password = prefs.getString("password", null);
+        if (user != null)
+            userText.setText(user);
+        if (password != null)
+            passwordText.setText(password);
+
         Button submitB = (Button) findViewById(R.id.submit);
         submitB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText userText = (EditText) findViewById(R.id.userText);
-                EditText passwordText = (EditText) findViewById(R.id.passwordText);
                 String user = userText.getText().toString();
                 String password = passwordText.getText().toString();
                 prefs.edit().putString("user",user).commit();
                 prefs.edit().putString("password",password).commit();
+                Toast.makeText(MainActivity.this, "saved!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -53,6 +63,10 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_about) {
             return true;
         }
 

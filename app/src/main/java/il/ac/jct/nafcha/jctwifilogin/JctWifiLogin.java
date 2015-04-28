@@ -104,6 +104,7 @@ public class JctWifiLogin extends IntentService{
             HttpResponse response = httpClient.execute(httpPost);
             // write response to log
             Log.d("Http Post Response:", response.toString());
+            reportStateChange();
         } catch (ClientProtocolException e) {
             // Log exception
             e.printStackTrace();
@@ -129,6 +130,20 @@ public class JctWifiLogin extends IntentService{
         }
 
         return false;
+    }
+
+    /**
+     * Report successful to Lollipop's captive portal detector
+     *
+     * See CaptivePortalLoginActivity in frameworks/base
+     */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void reportStateChange() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        // We're reporting "good" network. This function forces Android to
+        // re-evaluate the network (and realize it's no longer a captive portal).
+        cm.reportBadNetwork(mNetwork);
     }
 
     private void updateOngoingNotification(String message, boolean notify) {

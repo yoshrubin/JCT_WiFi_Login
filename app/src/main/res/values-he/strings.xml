@@ -7,4 +7,5 @@
     <string name="submit">שמור</string>
     <string name="user">שם</string>
     <string name="password">סיסמה</string>
+    <string name="action_about">אודות</string>
 </resources>

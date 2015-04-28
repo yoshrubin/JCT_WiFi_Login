@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JCT WiFi Login</string>
+
+    <string name="action_settings">הגדרות</string>
+    <string name="notify_login_ongoing_title">מתחבר...</string>
+    <string name="notify_request_wifi_ongoing_text">מתחבר...</string>
+    <string name="submit">שמור</string>
+    <string name="user">שם</string>
+    <string name="password">סיסמה</string>
+</resources>

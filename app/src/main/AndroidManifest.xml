@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="il.ac.jct.nafcha.jctwifilogin" >
-    <uses-feature android:name="android.hardware.wifi" android:required="true"></uses-feature>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    <uses-feature android:name="android.hardware.wifi" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"

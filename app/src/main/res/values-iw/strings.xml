@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JCT WiFi Login</string>
+    <string name="app_name">JCT WiFi</string>
 
     <string name="action_settings">הגדרות</string>
     <string name="notify_login_ongoing_title">מתחבר...</string>

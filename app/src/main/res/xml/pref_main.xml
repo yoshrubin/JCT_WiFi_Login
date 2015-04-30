@@ -12,7 +12,7 @@
     <ListPreference
         android:key="language"
         android:title="@string/choose_lang"
-        android:defaultValue="-1"
+        android:defaultValue="default"
         android:entries="@array/pref_languages_list_titles"
         android:entryValues="@array/pref_languages_list_values"
         android:negativeButtonText="@null"

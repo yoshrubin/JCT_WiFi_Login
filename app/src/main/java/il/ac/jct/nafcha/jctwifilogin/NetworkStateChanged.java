@@ -42,7 +42,10 @@ public class NetworkStateChanged extends BroadcastReceiver {
         // Check network connected
         NetworkInfo netInfo = intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);
         Log.d(TAG, "onReceive: netInfo = " + netInfo);
-        if (!netInfo.isConnected()) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean enable_login = sharedPref.getBoolean("enable_login", true);
+        Log.d(TAG, "enable_login " + enable_login);
+        if (!sharedPref.getBoolean("enable_login", true) || !netInfo.isConnected()) {
             return;
         }
 

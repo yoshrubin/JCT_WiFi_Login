@@ -104,7 +104,12 @@ public class JctWifiLogin extends IntentService{
             HttpResponse response = httpClient.execute(httpPost);
             // write response to log
             Log.d("Http Post Response:", response.toString());
-            reportStateChange();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                // Report logout successful so Android stops using this network
+                // (or at least that should happen, but 5.0.0_r2 doesn't seem to
+                // automatically switch to cellular)
+                reportStateChange();
+            }
         } catch (ClientProtocolException e) {
             // Log exception
             e.printStackTrace();

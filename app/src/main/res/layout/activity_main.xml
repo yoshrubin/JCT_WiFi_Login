@@ -18,44 +18,36 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
             android:src="@drawable/logo_he_no_background"
-            android:layout_above="@+id/userText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="76dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
             android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/user"
-        android:ems="10"
-        android:id="@+id/userText"
-        android:layout_above="@+id/passwordText"
-        android:layout_alignLeft="@+id/passwordText"
-        android:layout_alignStart="@+id/passwordText"
-        android:layout_gravity="center_horizontal" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:inputType="textPersonName"
+            android:text="@string/user"
+            android:ems="10"
+            android:id="@+id/userText"
+            android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/passwordText"
-        android:text="@string/password"
-        android:layout_above="@+id/submit"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp"
-        android:layout_gravity="center_horizontal" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordText"
+            android:text="@string/password"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:id="@+id/submit"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:id="@+id/submit"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </RelativeLayout>
 

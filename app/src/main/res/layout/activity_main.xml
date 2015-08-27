@@ -26,10 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:inputType="textPersonName"
-            android:text="@string/user"
             android:ems="10"
             android:id="@+id/userText"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:hint="User" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/passwordText"
-            android:text="@string/password"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:hint="Password" />
 
         <Button
             android:layout_width="wrap_content"

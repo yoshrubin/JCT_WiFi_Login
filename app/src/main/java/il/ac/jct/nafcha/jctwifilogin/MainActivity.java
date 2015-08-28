@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String user = userText.getText().toString();
                 String password = passwordText.getText().toString();
-                prefs.edit().putString("user",user).commit();
-                prefs.edit().putString("password",password).commit();
+                prefs.edit().putString("user", user).commit();
+                prefs.edit().putString("password", password).commit();
                 Toast.makeText(MainActivity.this, "saved!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -90,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_about:
                 startActivity(new Intent(this, About.class));
+                return true;
+            case R.id.action_update:
+                startService(new Intent(this, UpdateApp.class));
                 return true;
         }
 

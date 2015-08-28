@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/wifi_logo_blue"
@@ -37,6 +40,10 @@
 
         <service
             android:name=".JctWifiLogin"
+            android:enabled="true" />
+
+        <service
+            android:name=".UpdateApp"
             android:enabled="true" />
 
         <activity

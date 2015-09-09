@@ -16,7 +16,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/wifi_logo_blue"
+        android:icon="@mipmap/wifi_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity

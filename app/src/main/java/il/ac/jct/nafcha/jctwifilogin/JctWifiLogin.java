@@ -74,7 +74,7 @@ public class JctWifiLogin extends IntentService{
             }
         }
 
-        String httpPost = "https://wireless-login.jct.ac.il/login.html";
+        String httpPost = "https://captiveportal-login.jct.ac.il/";
 
 
         //Encoding POST data
